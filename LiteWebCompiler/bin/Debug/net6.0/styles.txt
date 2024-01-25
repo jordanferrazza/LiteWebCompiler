@@ -1,0 +1,31 @@
+@clear tags // delete the tag directory
+@create html // declare html tag
+@create head // declar head tag
+@create body //...
+@create style
+@create p
+@default p // if no prefix exists, use <p> by default
+@create h1
+@alias h1 >> // alias the alias of h1 to >>
+@create h2
+@alias h2 > // alias the alias of h1 to >
+@create tr
+@create td
+@create th
+@create_ table		// declare table, but... (in literal mode...)
+	@line tr		// surround all the sub-lines with <tr>
+	@split | td		// if | is on a line, split the line by | and surround each part by <td>
+	@split # th		// if # is on a line, split the line by # and surround each part by <th>
+@end				// end create table
+@create strong
+@inline strong **
+@create span
+@inline span ??
+@create small
+@inline small ^^
+@create_ styles link		// declare pattern of <link> called styles with...
+	@there rel stylesheet	// rel=stylesheet
+	@there href styles.css	// href=styles.css
+@end						// end create styles
+@create a
+@create div

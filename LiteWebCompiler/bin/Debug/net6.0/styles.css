@@ -1,0 +1,82 @@
+﻿body {
+    font-family: figtree, sans-serif;
+    font-size: small;
+}
+
+h1 {
+    color: orange;
+    text-decoration: underline
+}
+
+h2 {
+    color: blue;
+}
+
+/* https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro */
+table {
+    font-size: small;
+    border-collapse: collapse;
+    /*width: 100%;*/
+}
+
+td, th {
+    padding: 8px;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    font-weight: normal;
+}
+
+td:nth-child(1) {
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+   /*background-color: #dddddd;*/
+}
+
+.nat {
+    background: white;
+    border: double medium green;
+    color: green;
+    border: solid thin white;
+    display: inline-block;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px
+}
+
+.prov {
+    background: white;
+    border: double medium green;
+    color: green;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 5px;
+    font-weight: bold;
+}
+
+
+.mwy {
+    border: double medium white;
+    background: blue;
+    color: white;
+}
+
+.reg {
+    border: double medium white;
+    background: green;
+    color: white;
+    font-weight: normal;
+}
+
+.bus {
+    border: double medium blue;
+    color: blue;
+    font-weight: normal;
+}

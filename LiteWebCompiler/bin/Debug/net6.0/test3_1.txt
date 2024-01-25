@@ -1,0 +1,39 @@
+
+
+@let -c a = b
+		@let -v eq
+		@run if.txt
+		@let -c a <> b
+		@let -v neq
+		@run if.txt
+		@let -c a > b
+		@let -v gtr
+		@run if.txt
+		@let -c a < b
+		@let -v les
+		@run if.txt
+		@let -c a >= b
+		@let -v geq
+		@run if.txt
+		@let -c a <= b
+		@let -v leq
+		@run if.txt
+
+
+		table_
+			Name # Value
+			a | {{a}}
+			b | {{b}}
+		@end
+
+		table_
+			Operator # Value
+			\= | {{eq}}
+			\<> | {{neq}}
+			\> | {{gtr}}
+			\< | {{les}}
+			\>= | {{geq}}
+			\<= | {{leq}}
+		@end
+
+		hr

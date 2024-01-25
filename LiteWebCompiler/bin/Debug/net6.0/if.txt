@@ -1,0 +1,4 @@
+@if_ {{-c}}
+@let {{-v}} yes
+@else
+@let {{-v}} no

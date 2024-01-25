@@ -1,0 +1,95 @@
+@run styles.txt // run this macro to get the variables below
+
+@to test.html	// set the output file
+@clear file		// delete the contents of the output file to prevent appending
+
+
+html__			// declare html tag with the following contents...
+
+	head__		// declare head tag with the following contents...
+		styles	// add the stylesheet link prototype
+
+		//https://www.w3schools.com/howto/howto_js_topnav.asp
+		style_
+
+
+			.topnav {
+			  overflow: hidden;
+			  background-color: #333;
+			}
+
+			.topnav a {
+			  float: left;
+			  color: #f2f2f2;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			  font-size: 17px;
+			}
+
+			.topnav a:hover {
+			  background-color: #ddd;
+			  color: black;
+			}
+
+			.topnav a.active {
+			  background-color: #04AA6D;
+			  color: white;
+			}
+		@end
+	@end		// end head
+
+	body__
+		>> Hello this a test of LiteWebCompiler
+		**LiteWebCompiler** is an extensible, portable XML compiler project by Jordan Ferrazza
+		> Welcome!
+		This is a test paragraph with default tags
+
+		> Table
+		This is a table:
+
+		table_ 
+			@where_ th colspan 2	// make the next th tag have a colspan of 2
+			# **Table test**
+			Name	# Value
+			aaaaa	| 11111
+			bbbbb	| 22222 :: @where style color:red // make this cell (any next tag) red
+			ccccc	| 33333
+		@end	// end table
+
+		>> Test variables
+		@where style background:green
+		The style of this is {{_p_style}} // should work
+		The style of that was {{_p_style}} // should not work
+		The style of that was {{_c_style}} // should work
+
+
+
+
+
+		>> Test navbar
+
+		@where class topnav
+		div__
+			@if {{page}} = 1
+				@where class active
+			a Home
+			@if {{page}} = 2
+				@where class active
+			a News
+			@if {{page}} = 3
+				@where class active
+			a About
+			@if {{page}} = 4
+				@where class active
+			a Contact
+		@end
+
+
+
+	@end		// end body
+@end			// end html - now print html tag
+
+@format			// regurgitate the file to add tabs
+@open			// open the output file
+			

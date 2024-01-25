@@ -1,0 +1,29 @@
+@run styles.txt // run this macro to get the variables below
+@create hr
+
+@to test3.html	// set the output file
+@clear file		// delete the contents of the output file to prevent appending
+
+html__			// declare html tag with the following contents...
+
+	head__		// declare head tag with the following contents...
+		styles	// add the stylesheet link prototype
+	@end		// end head
+
+	body__
+		
+		@let a 55
+		@let b 44
+		@run test3_1.txt
+		@let a 33
+		@let b 33
+		@run test3_1.txt
+		@let a 11
+		@let b 22
+		@run test3_1.txt
+
+		
+	@end
+@end
+
+@open
